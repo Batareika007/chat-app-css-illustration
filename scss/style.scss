@@ -1,0 +1,181 @@
+@import 'normalize';
+@import 'global';
+@import 'colors';
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* if need bottom footer */
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: transparent;
+}
+
+// main style
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    // font-weight: 500;
+    // font-weight: 700;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.app {
+    width: 260px;
+    background-color: $app_bg;
+    border: 10px solid $white;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.339);
+
+    &__heading {
+        border-radius: 20px 20px 10px 10px;
+        position: relative;
+        padding: 2rem 1rem;
+        background: linear-gradient(90deg, $bg_color_2 0%, $bg_color_1 100%);
+        display: flex;
+        color: $white;
+        margin-bottom: 1rem;
+        align-items: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            top: 0;
+            left: 0;
+            width: 130px;
+            margin: 0 55px;
+            height: 20px;
+            border-radius: 0px 0px 14.5px 14.5px;
+        }
+        &_img {
+            width: 32px;
+            height: 32px;
+            border-radius: 34px;
+            overflow: hidden;
+            border: 2px solid $white;
+            margin-right: 0.5rem;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        svg{
+            fill: $white;
+        }
+
+        &_text{
+            align-self: center;
+            align-items: baseline;
+            line-height: 0.7rem;
+            header{
+            font-size: 0.7rem;
+            font-weight: 500;
+            }
+            span{
+                font-size: 0.5rem;
+            }
+        }
+
+        button{
+            vertical-align: center;
+        }
+    }
+
+    &__main{
+        padding: 0 10px;
+        font-size: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        &_msg{
+            max-width: 175px;
+            padding: 12px;
+            margin-bottom: 0.6rem;
+            border-radius: 15px;
+        }
+        &_img{
+            display: flex;
+            gap: 8px;
+            margin-bottom: 0.6rem;
+            background-color: transparent !important;
+            .img{
+                height: 40px;
+                width: 40px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__form{
+        padding: 0 10px;
+    }
+}
+
+.chat_right{
+    margin-right: 0;
+    color: $chat_right;
+    background-color: $white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+.chat_left{
+    color: $chat_left;
+    background-color: $chat_left_bg;
+    border-bottom-left-radius: 5px;
+}
+
+/* text side */ 
+.text {
+    max-width: 450px;
+
+    &_heading {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: $main_heading;
+    }
+
+    &_paragraph {
+        color: $paragraph;
+    }
+}
+
+/*  form  */
+
+.form__radio{
+            background: linear-gradient(90deg, $bg_color_1 0%, $bg_color_2 100%);
+
+}
