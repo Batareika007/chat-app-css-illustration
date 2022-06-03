@@ -31,31 +31,33 @@
   <div class="wrapper">
 
     <main>
+
       <div class="container">
 
-
+        <!-- app side -->
         <div class="app">
 
           <div class="app__heading">
-            <button class="app__heading_back-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 34 16" width="16" height="16">
-                <path
-                  d="M17.921,1.505a1.5,1.5,0,0,1-.44,1.06L9.809,10.237a2.5,2.5,0,0,0,0,3.536l7.662,7.662a1.5,1.5,0,0,1-2.121,2.121L7.688,15.9a5.506,5.506,0,0,1,0-7.779L15.36.444a1.5,1.5,0,0,1,2.561,1.061Z" />
-              </svg>
+            <div class="app__heading_inner">
+              <button class="app__heading_back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 34 16" width="16" height="16">
+                  <path
+                    d="M17.921,1.505a1.5,1.5,0,0,1-.44,1.06L9.809,10.237a2.5,2.5,0,0,0,0,3.536l7.662,7.662a1.5,1.5,0,0,1-2.121,2.121L7.688,15.9a5.506,5.506,0,0,1,0-7.779L15.36.444a1.5,1.5,0,0,1,2.561,1.061Z" />
+                </svg>
 
-            </button>
-            <div class="app__heading_img">
-              <img src="images/avatar.jpg" alt="user avatar">
+              </button>
+              <div class="app__heading_img">
+                <img src="images/avatar.jpg" alt="user avatar">
+              </div>
+              <div class="app__heading_text">
+                <header>
+                  Samuel Green
+                </header>
+                <span>
+                  Available to Walk
+                </span>
+              </div>
             </div>
-            <div class="app__heading_text">
-              <header>
-                Samuel Green
-              </header>
-              <span>
-                Available to Walk
-              </span>
-            </div>
-
             <button class="app__heading_menu-btn">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                 id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
@@ -108,25 +110,41 @@
 
           <div class="app__form">
             <form action="javascript:void(0);">
-              <div class="form__radio">
-                <input type="radio" name="price" id="low-price">
-                <label for="low-price">30 minute walk $29</label>
-              </div>
+
               <div class="form__radio">
 
-                <input type="radio" name="price" id="high-price">
-                <label for="high-price">1 hour walk $49</label>
+                <label for="low-price">
+                  <input type="radio" name="price" id="low-price" value="29" class="radio-btn">
+                  <span>
+                    30 minute walk
+                  </span>
+                </label>
+                <span class="price">$29</span>
               </div>
-              <input type="text" placeholder="Type a message…">
+
+              <div class="form__radio">
+                <label for="high-price">
+                  <input type="radio" name="price" id="high-price" value="49" class="radio-btn">
+                  <span>
+                    1 hour walk
+                  </span>
+                </label>
+                <span class="price">$49</span>
+              </div>
+
+
+
+              <div class="form__text">
+                <input type="text" class="form__input" placeholder="Type a message…" required>
+                <button type="submit" form="form1" value="Submit" class="flex-center">>
+                </button>
+              </div>
+
             </form>
           </div>
         </div>
 
-
-
-
-
-
+        <!-- text side -->
         <div class="flex-center">
           <div class="text">
 
@@ -144,13 +162,16 @@
 
 
       </div>
+
     </main>
 
 
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
     </footer>
+
+
   </div>
 
 
